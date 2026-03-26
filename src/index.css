@@ -1,0 +1,77 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"); */
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-roboto: "Roboto"
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-roboto;
+}
+
+.h1 {
+  @apply font-bold text-5xl md:text-6xl lg:text-7xl uppercase tracking-wide;
+}
+
+.h2 {
+  @apply font-bold text-4xl md:text-4xl lg:text-5xl uppercase tracking-wide;
+}
+
+.h3 {
+  @apply font-bold text-3xl md:text-3xl lg:text-4xl tracking-wide;
+}
+
+.h4 {
+  @apply font-bold text-2xl md:text-2xl lg:text-3xl tracking-wide;
+}
+
+a,
+p,
+span,
+label {
+  @apply text-sm md:text-base;
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility container {
+  padding-inline: 10px;
+  margin-inline: auto;
+
+  @variant sm {
+    padding-inline: 20px;
+  }
+
+  @variant lg {
+    padding-inline: 80px;
+  }
+
+  @variant xl {
+    padding-inline: 120px;
+  }
+}
+
+.pizza.sold-out {
+  color: #888;
+}
+
+.pizza.sold-out img {
+  filter: grayscale();
+  opacity: 0.8;
+}
